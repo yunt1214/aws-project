@@ -13,7 +13,7 @@ RUN chmod u+x install-docker.sh && \
     ./install-docker.sh
 
 # zip install
-RUN apt install zip -y
+RUN apt install zip unzip -y
 
 # set jenkins user to host docker group
 RUN /usr/sbin/groupadd -g ${DOCKER_GID:-1000} -f docker && \
